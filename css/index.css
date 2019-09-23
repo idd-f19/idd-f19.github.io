@@ -63,6 +63,7 @@ a:hover {
 
 
 
+
 /* 
 To review:
 - Setup
@@ -71,3 +72,36 @@ To review:
 - Style Guide + Custom Properties
 - Minimalist
 */
+dt, dd {
+  margin: 0;
+}
+.topics :nth-child(4n+1), .topics :nth-child(4n+2) {
+  background-color: lightgrey;
+}
+@media screen and (min-width: 600px) {
+  .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.support {
+  width: 4em;
+  height: 4em;
+  background-color: var(--secondary-a);
+  color: var(--on-secondary);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(0,0,0,0.4);
+  text-align: center;
+  line-height: 1em;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  position: fixed;
+  top: 5em;
+  right: 1em;
+  z-index: 1;
+}
+.support:hover {
+  transform: scale(1.2);
+}
